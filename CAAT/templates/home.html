@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% static "/img" as image %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/style/home.css' %}">
+
+    <title>CAAT</title>
+</head>
+<script>
+    console.log('hey {{ name }}');
+</script>
+<body>
+    <div class="nav flex">
+        <a>College Attendance And AICTE Points Tracker</a>
+        <button href="/" class="nav_btn">LOG OUT</button>
+    </div>
+    <div class="body">
+        <div class="welcome center">
+            <h3>WELCOME {{name}} </h3>
+        </div>
+        <section id="main">
+            <div id="services" class="flex">
+                {% for i in b %}
+                <a href="#" class="option center">
+                    <img src="{{ image }}/{{ i.img }}" alt="{{ i.img }}">
+                    <h2>{{ i.title }}</h2>
+                    <p>{{ i.desc }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
