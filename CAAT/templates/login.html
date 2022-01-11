@@ -7,14 +7,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSS</title>
 
-    {% load static %}
-    <link rel="stylesheet" href="{%static '/style/login.css' %}">
-</head>
+    <style>
+         body{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#outline{
+    width: 98vw;
+    height: 97vh;
+    background-color: rgb(50,55,67);
+    margin: 0.5rem;
+}
+.main_box{
+    flex-direction: column;
+}
+.box{
+    width: 20.87rem;
+    height: 22.75rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,18,40);
+    box-shadow:  -3px 0px 20px 4px black;
+}
+.items{
+    padding: 1.5rem 1.25rem 1.25rem 1.875rem;
+    width: 100%;
+    height: 65%;
+    flex-flow: column wrap;
+}
+.user,.pass{
+    padding: 0.625rem 3.75rem 0.625rem 0.75rem;
+    border: 2px solid rgb(30, 83, 118);
+    background: rgba(30, 83, 118, 0.5);
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+    transition: 500ms;
+    color:rgba(255,255, 255, 0.5);
+}
+.user:focus,.pass:focus{
+    border: 2px solid rgb(61,230,175);
+    padding: 10px 80px 10px 10px;
+}
+.rem{
+    color:rgba(255,255, 255, 0.5);
+    font-size: 13px;
+}
+.formality{
+    justify-content: start;
+    margin-bottom: 10px;
+}
 
+.reg_box{
+    display: none;
+    width: 20.87rem;
+    height: 35.75rem;
+    background-color: rgb(0,18,40);
+    box-shadow:  -3px 0px 20px 4px black;
+}
+.reg_items{
+    padding: 1.5rem 1.25rem 1.25rem 1.875rem;
+    width: 100%;
+    height: 75%;
+    flex-flow: column wrap;
+}
+.btn{
+    padding: 5px 26px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 5px solid  rgb(61,230,175);
+    background:  rgb(61,230,175);
+    {#margin-right: 14px;#}
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
+.btn_div{
+    position: relative;
+    left: -1rem;
+    padding-bottom: 0.7rem;
+
+}
+.btn:hover{
+    background-color: rgb(30,83,118);
+    color:rgba(255,255, 255, 0.5);
+    border-color: rgb(30,83,118);
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    margin-right: 6px;
+}
+.switch input{
+    display: none;
+}
+.forg{
+    text-decoration: none;
+    color:rgba(255,255, 255, 0.5);
+    font-size: 13px;
+    padding-left:35px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 2px;
+    background-color: black;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider  {
+    background-color: rgb(61, 230, 175);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+    </style>
+{#    {% load static %}#}
+{#    <link rel="stylesheet" href="{%static '/style/index.css' %}">#}
+</head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div id="outline" class="flex">
+        <div class="main_box flex">
         <div class="box flex">
-            <form name="log_in" class="items" action="/home/" method="post"> {% csrf_token %}
+            <form name="log_in" id="log_in" class="items" action="/home/" method="post"> {% csrf_token %}
             <input type="text" placeholder="USN" class="user" name="usn" required>
             <input type="password" placeholder="Password" class="pass" name="pwd" minlength="7" maxlength="20" required>
 
@@ -24,14 +170,51 @@
                 <span class="slider"></span>
             </label>
             <label for="role" class="rem">Lecturer Login</label>
-            <a href="accounts/register" class="forg">New Student?<br> Register here</a>
-        </div>
+            <a href="#" class="forg">New User? <br> Register Here</a>
 
+        </div>
+        <div class="flex btn_div">
             <button type="submit" class="btn">LOGIN</button>
             <button type="reset" class="btn">CLEAR</button>
+            </div>
         </form>
         </div>
+
+        <div class="reg_box">
+          <form name="register" id="register" class="reg_items" action="/" method="post"> {% csrf_token %}
+            <input type="text" placeholder="Username" class="user" name="username" required>
+            <input type="text" placeholder="First Name" class="user" name="fname" required>
+            <input type="text" placeholder="Last Name" class="user" name="lname" required>
+            <input type="email" placeholder="email" class="user" name="email" required>
+            <input type="text" placeholder="USN or SSN" class="user" name="serial" required>
+            <input type="password" placeholder="Password" class="user" name="pwd" minlength="7" maxlength="20" required>
+            <input type="password" placeholder="Confirm Password" class="user" name="pwd" minlength="7" maxlength="20" required>
+
+            <div class="formality flex">
+            <label class="switch">
+                <input type="checkbox" name="role" id="role">
+                <span class="slider"></span>
+            </label>
+            <label for="role" class="rem">Register as Lecturer</label>
+            <a href="#" class="forg">Have an<br> account?<br>Login Here</a>
+
+            </div>
+
+            <button type="submit" class="btn">CREATE</button>
+            <button type="reset" class="btn">CLEAR</button>
+        </form>
     </div>
+    </div>
+        </div>
+
+<script>
+    $('.formality a').click(
+  function() {
+    $('.box').animate({height: "toggle", opacity: "toggle"}, "slow");
+    $('.reg_box').animate({height: "toggle", opacity: "toggle"}, "slow");
+  }
+ );
+</script>
 </body>
 
 </html>
