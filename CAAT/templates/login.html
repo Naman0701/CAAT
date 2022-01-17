@@ -16,16 +16,12 @@
         <div class="main_box flex">
         <div class="box flex">
             <form name="log_in" id="log_in" class="items" action="/home/" method="post"> {% csrf_token %}
-            <input type="text" placeholder="USN" class="user" name="usn" required>
-            <input type="password" placeholder="Password" class="user" name="pwd" minlength="7" maxlength="20" required>
+            <input type="text" placeholder="USN OR SSN" class="user" name="id" required>
+            <input type="password" placeholder="Password" class="user" name="pwd" minlength="7" maxlength="200" required>
+            <input type="hidden" name="action" value="log_in">
 
-            <div class="formality flex">
-            <label class="switch">
-                <input type="checkbox" name="role" id="role">
-                <span class="slider"></span>
-            </label>
-            <label for="role" class="rem">Lecturer Login</label>
-            <a href="#" class="forg">New User? <br> Register Here</a>
+            <div class="formality flex" style="justify-content: space-around">
+            <a href="#" class="forg">New User? Register Here</a>
 
         </div>
         <div class="flex btn_div">
@@ -37,10 +33,10 @@
 
         <div class="reg_box">
           <form name="register" id="register" class="reg_items" action="/" method="post"> {% csrf_token %}
-            <input type="text" placeholder="Username" class="user" name="username" required>
-            <input type="text" placeholder="USN or SSN" class="user" name="serial" required>
-            <input type="password" placeholder="Password" class="user" name="pwd" minlength="7" maxlength="20" required>
-            <input type="password" placeholder="Confirm Password" class="user" name="pwd" minlength="7" maxlength="20" required>
+            <input type="text" placeholder="USN or SSN" class="user" name="id" required>
+            <input type="password" id="pwd1" placeholder="Password" class="user" name="pwd" minlength="7" maxlength="20" required>
+            <input type="password" id="pwd2" placeholder="Confirm Password" class="user" name="cpwd" onchange="check_pass()" minlength="7" maxlength="20" required>
+            <input type="hidden" name="action" value="register">
 
             <div class="formality flex">
             <label class="switch">
@@ -52,7 +48,7 @@
 
             </div>
 
-            <button type="submit" class="btn">REGISTER</button>
+            <button id="submit" type="submit" class="btn" disabled>REGISTER</button>
             <button type="reset" class="btn">CLEAR</button>
         </form>
     </div>
@@ -60,6 +56,10 @@
         </div>
 
 <script>
+    var p1=document.getElementById('pwd1'),
+        p2=document.getElementById('pwd2');
+
+
     $('.formality a').click(
   function() {
     $('.box').animate({height: "toggle", opacity: "toggle"}, "slow");
@@ -68,6 +68,16 @@
     document.getElementById('register').reset();
   }
  );
+
+    function check_pass() {
+        console.log(p1)
+        console.log(p2)
+        if (p1.value==p2.value)
+            {document.getElementById('submit').disabled=false;}
+        else{
+            document.getElementById('submit').disabled=true
+        }
+    }
 </script>
 </body>
 
