@@ -56,8 +56,10 @@ def home(req):
         data=User.objects.filter(username=id)
         role=data.get().is_staff
         i = 1
+        staff='Student'
         if role ==True:
             i = 0
+            staff='Teacher'
         b1 = box()
         b1.img = 'attend.jpg'
         b1.title = 'ATTENDANCE'
@@ -71,7 +73,8 @@ def home(req):
         b = [b1, b2]
 
         d = {'b': b,
-             'name': data.get().first_name + ' ' + data.get().last_name
+             'name': data.get().first_name + ' ' + data.get().last_name,
+             'staff':staff
              }
         return render(req, 'home.html', d)
     else:
