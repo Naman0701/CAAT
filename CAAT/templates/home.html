@@ -12,7 +12,9 @@
     <title>CAAT</title>
 </head>
 <script>
-    console.log('hey {{ name }}');
+    var p1='{{ id }}'
+    console.log(p1);
+    localStorage.setItem("id",p1);
 </script>
 <body>
     <div class="nav flex">

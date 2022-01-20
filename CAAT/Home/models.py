@@ -49,6 +49,9 @@ class Attendance(models.Model):
     Sub_code=models.ForeignKey(Subject,on_delete=models.CASCADE)
     Date=models.DateField(auto_now_add=True,auto_now=False)
     Mark=models.BooleanField(default=True)
+    def __str__(self):
+        id=f'{self.Usn}-{self.Sub_code}-{self.Date}-{self.Mark}'
+        return id
 
 
 

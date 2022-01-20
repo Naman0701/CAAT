@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+{% static "/img" as image %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/style/S_attend.css' %}">
+
+
+    <title>CAAT</title>
+</head>
+<body>
+<script>
+    var p2=localStorage.getItem("id");
+    console.log(p2);
+</script>
+    <div class="nav flex">
+        <a>College Attendance And AICTE Points Tracker</a>
+        <a>{{ name }}</a>
+    </div>
+    <!-- Content -->
+    <div class="content flex">
+        <div class="side flex">
+            <button class="nav_btn on" onclick="location.href='/home/Student/ATTENDANCE/'" type="button">Attendance</button>
+            <button class="nav_btn" onclick="location.href='/home/Student/AICTE/'" type="button">AICTE</button>
+            <button class="nav_btn" onclick="location.href='/'" type="button">Log Out</button>
+
+        </div>
+
+        <div class="main">
+            <div class="minhead flex"><h4>ATTENDANCE</h4></div>
+            <table class="tab">
+                <tr>
+                    <th>DATE</th>
+                    <th>ATTENDANCE</th>
+                </tr>
+                {% for i in b %}
+                <tr>
+                    <td>{{ i.date }}</td>
+                    <td> <img src="{{ image }}/{{ i.img }}" alt="z" style="width: 3rem"> </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

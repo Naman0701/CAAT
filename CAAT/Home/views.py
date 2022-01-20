@@ -47,6 +47,7 @@ def login(req):
 
 def home(req):
     id = req.POST.get('id')
+    req.session['id']=id
     pwd = req.POST.get('pwd')
     user=auth.authenticate(username=id, password=pwd)
     at = ('Enter the attendance of the students.', 'View your attendance.')
@@ -74,7 +75,8 @@ def home(req):
 
         d = {'b': b,
              'name': data.get().first_name + ' ' + data.get().last_name,
-             'staff':staff
+             'staff':staff,
+             'id':id
              }
         return render(req, 'home.html', d)
     else:

@@ -1,0 +1,100 @@
+
+html{
+    padding: -1px;
+    margin: -10px;
+    box-sizing: border-box;
+    width: 99%;
+}
+body{
+    height: 100%;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+                    /* NAVBAR */
+.nav{
+    background-color:  #32393f;
+    color: rgba(255, 255, 255, 0.932);
+    border-radius: 8px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    position:static;
+    padding-top: 0.8rem;
+    padding-left: 5rem;
+    margin-left: -15px;
+    margin-right: -33px;
+    margin-top: -15px;
+}
+.nav a{
+    padding: 1.2rem 1rem;
+    font-size: 1.3rem;
+}
+.nav>a:first-child{
+    padding-right: 15rem;
+}
+.nav_btn{
+    background-color: inherit;
+    border: none;
+    color: rgb(169, 169, 169);
+    font-weight: 650;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1.5rem 0rem;
+    outline: none;
+    width: 90%;
+    border-bottom: 1.5px solid white;
+    font-size: 1rem;
+}
+.nav_btn:hover{
+    background-color: #252c2f;
+    color: #f0f0f0;
+}
+.content{
+    justify-content: start;
+    height: 91vh;
+
+}
+.side{
+    background-color: #1e2426;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    justify-content: flex-start;
+}
+.on{
+    color: white;
+    background-color: #252c3f;
+    border-bottom: 1.5px solid rgb(61, 230, 175);
+}
+.main{
+    padding: 15px;
+    width: 75%;
+    height: 100%;
+}
+
+.minhead{
+    background-color: lightgrey;
+    width: 100%;
+    height: 32px;
+    margin-top: 15px;
+    border: 1px solid rgb(169, 168, 168);
+    justify-content: flex-start;
+}
+table, th, td {
+    border:1px solid lightgrey;
+  }
+table{
+    width: 100%;
+}
+td{
+    text-align: center;
+    height: 2rem;
+}
+
+.tab a{
+    text-decoration: none;
+    color: inherit;
+}
