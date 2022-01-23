@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student,Teacher,Teaches,Subject,Attendance
+from .models import Student,Teacher,Teaches,Subject,Attendance,Mentor,AicteP
 # Register your models here.
 
 class AdminS(admin.ModelAdmin):
@@ -16,9 +16,15 @@ class AdminTs(admin.ModelAdmin):
 
 class AdminA(admin.ModelAdmin):
     list_display = ['Date','Usn','Sub_code','Mark']
+class AdminM(admin.ModelAdmin):
+    list_display = ['Mentor','Usn']
+class AdminAicte(admin.ModelAdmin):
+    list_display = ['Date','Usn']
 
 admin.site.register(Student,AdminS)
 admin.site.register(Teacher,AdminT)
 admin.site.register(Teaches,AdminTs)
 admin.site.register(Subject,AdminSu)
 admin.site.register(Attendance,AdminA)
+admin.site.register(Mentor,AdminM)
+admin.site.register(AicteP,AdminAicte)

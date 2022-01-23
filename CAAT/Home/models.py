@@ -9,7 +9,6 @@ class Student(models.Model):
     Dept=models.CharField(max_length=50)
     Sem=models.IntegerField()
     Section=models.CharField(max_length=1)
-    Batch=models.IntegerField()
 
     def __str__(self):
         id=self.Usn+' - '+ self.Fname+' '+self.Lname
@@ -43,16 +42,30 @@ class Teaches(models.Model):
     Dept=models.CharField(max_length=50)
     Sem=models.IntegerField()
     Sec=models.CharField(max_length=1)
+    def __str__(self):
+        id=f'{self.Sub_code}-{self.Teacher_id}'
+        return id
 
 class Attendance(models.Model):
     Usn=models.ForeignKey(Student,on_delete=models.CASCADE)
     Sub_code=models.ForeignKey(Subject,on_delete=models.CASCADE)
-    Date=models.DateField(auto_now_add=True,auto_now=False)
+    Date=models.DateField()
     Mark=models.BooleanField(default=True)
     def __str__(self):
         id=f'{self.Usn}-{self.Sub_code}-{self.Date}-{self.Mark}'
         return id
-
+class Mentor(models.Model):
+    Usn = models.ForeignKey(Student, on_delete=models.CASCADE)
+    Mentor= models.ForeignKey(Teacher,null=True,on_delete=models.SET_NULL)
+    Points=models.IntegerField()
+    def __str__(self):
+        id=f'{self.Usn}-{self.Mentor}'
+        return id
+class AicteP(models.Model):
+    Usn=models.ForeignKey(Student,on_delete=models.CASCADE)
+    Date=models.DateField(default=date.today())
+    Activity=models.CharField(max_length=50)
+    Point=models.IntegerField(default=0)
 
 
 

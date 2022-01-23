@@ -1,0 +1,16 @@
+
+from django.contrib import admin
+from django.urls import path,include
+from . import views
+
+urlpatterns = [
+    path("ATTENDANCE/",views.Attend,name="Attendance"),
+    path("ATTENDANCE/enter/<sub>/<dept>/<sem>/<sec>",views.en_Attend,name="Attendance_enter"),
+    path("ATTENDANCE/enter/<sub>/<dept>/<sem>/<sec>/submit",views.done_Attend,name="Attendance_done"),
+    path("ATTENDANCE/edit/<sub>/<dept>/<sem>/<sec>/<dat>/update",views.up_attend,name="Attendance_up"),
+    path("ATTENDANCE/view/<sub>/<dept>/<sem>/<sec>",views.v_Attend,name="Attendance_view"),
+    path("ATTENDANCE/edit/<sub>/<dept>/<sem>/<sec>",views.e_Attend,name="Attendance_edit"),
+    path("ATTENDANCE/del/<sub>/<dept>/<sem>/<sec>/<dat>",views.del_Attend,name="Attendance_del"),
+    path("ATTENDANCE/edit/<sub>/<dept>/<sem>/<sec>/<dat>",views.ed_Attend,name="Attendance_edit_a"),
+    path("AICTE/",views.aicte,name="aicte"),
+    ]

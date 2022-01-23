@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,HttpResponse
-from Home.models import Student,Teacher,Subject,Attendance
+from Home.models import Student,Teacher,Subject,Attendance,Mentor,AicteP
 from django.contrib.auth.models import User,auth
 
 def Attend(req):
@@ -21,7 +21,6 @@ def Attend(req):
     ac=0
     ap=0
     for i in Sub:
-        obj=f'{i.Sub_name}'
         obj=box()
         obj.c_id=i.Sub_code
         obj.c_name=i.Sub_name
@@ -60,8 +59,6 @@ def Attendance_Subject(req,subject):
     code=sub.get().Sub_code
     atd=Attendance.objects.filter(Usn=id).filter(Sub_code=code).order_by('-Date')
     for i in atd:
-        obj=f'O{i.id}'
-        print(i.Mark)
         mark='tick.png'
         if i.Mark==False:
             mark='x.png'
@@ -72,9 +69,35 @@ def Attendance_Subject(req,subject):
     d={
         'b':b,
         'name': data.get().Fname + ' ' + data.get().Lname,
+        'sub':sub.get().Sub_name
     }
     return render(req,'attend_subject.html',d)
 
 
 def aicte(req):
-    pass
+    b=[]
+    class box:
+        name:str
+        point:int
+    sum=0
+    id = req.session['id']
+    data = Student.objects.filter(Usn=id)
+    m_name= f'{Mentor.objects.filter(Usn=id).get().Mentor.Fname} {Mentor.objects.filter(Usn=id).get().Mentor.Lname}'
+    allwork=AicteP.objects.filter(Usn=id).order_by('-Date')
+    for j in allwork:
+        obj=box()
+        obj.name=j.Activity
+        obj.point=j.Point
+        sum+=j.Point
+        b.append(obj)
+    Ment=Mentor.objects.get(Usn=id)
+    Ment.Points=sum
+    Ment.save()
+    d={
+        'b':b,
+        'id':id,
+        'name':data.get().Fname + ' ' + data.get().Lname,
+        'm_name':m_name,
+        'sum':Ment.Points
+    }
+    return render(req,'Aicte.html',d)

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/style/S_attend.css' %}">
+
+
+    <title>CAAT</title>
+</head>
+<body>
+<script>
+    var p2=localStorage.getItem("id");
+    console.log(p2);
+</script>
+    <div class="nav flex">
+        <a>College Attendance And AICTE Points Tracker</a>
+        <a>{{ name }}</a>
+    </div>
+    <!-- Content -->
+    <div class="content flex">
+        <div class="side flex">
+            <button class="nav_btn on" onclick="location.href='/home/Teacher/ATTENDANCE/'" type="button">Attendance</button>
+            <button class="nav_btn" onclick="location.href='/home/Teacher/AICTE/'" type="button">AICTE</button>
+            <button class="nav_btn" onclick="location.href='/'" type="button">Log Out</button>
+
+        </div>
+
+        <div class="main">
+            <div class="minhead flex"><h4>ATTENDANCE {{ s_name }} : {{ dept }}-{{ sem }}{{ sec }}</h4></div>
+            <div class="minhead date flex"><h4>{{ dat }}</h4></div>
+            <form name="update" id="update" action="/home/Teacher/ATTENDANCE/edit/{{ sub }}/{{ dept }}/{{ sem }}/{{ sec }}/{{ dat }}/update" method="post"> {% csrf_token %}
+                <table class="tab">
+                <tr>
+                    <th>Usn</th>
+                    <th>Name</th>
+                    <th>Attendance</th>
+                </tr>
+                {% for i in b %}
+                <tr>
+                    <td>{{ i.usn }}</td>
+                    <td>{{ i.name }}</td>
+                    <td><h3 class="absent">A</h3>
+                        <label class="switch">
+                            {% if i.mark %}
+                                <input type="checkbox" name="{{ i.usn }}" id="{{ i.usn }}" checked>
+                            {% else %}
+                                <input type="checkbox" name="{{ i.usn }}" id="{{ i.usn }}">
+                            {% endif %}
+                        <span class="slider"></span>
+                     </label><h3 class="present">P</h3>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </table>
+                 <button type="submit" class="btn" style="color: black;font-weight: 700">Submit</button>
+                 <button type="reset" class="btn" style="color: black;font-weight: 700">Reset</button>
+        </form>
+        </div>
+    </div>
+</body>
+
+</html>
