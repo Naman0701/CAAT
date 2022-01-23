@@ -17,7 +17,7 @@ class AdminTs(admin.ModelAdmin):
 class AdminA(admin.ModelAdmin):
     list_display = ['Date','Usn','Sub_code','Mark']
 class AdminM(admin.ModelAdmin):
-    list_display = ['Mentor','Usn']
+    list_display = ['mentor_d','Usn']
 class AdminAicte(admin.ModelAdmin):
     list_display = ['Date','Usn']
 

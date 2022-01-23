@@ -1,0 +1,29 @@
+.a_act{
+    flex-flow:column;
+}
+.t_item{
+    font-size: 1.5rem;
+    padding: 5px;
+}
+.t_item label,.t_item input{
+    font-weight: 700;
+    padding: 7px;
+    margin: 7px;
+}
+.t_item input{
+    font-size: 1.2rem;
+    background-color: wheat;
+    border-radius: 15px;
+}
+
+.t_btn{
+    margin: 7px;
+}
+#sub{
+    background-color: #006b1b;
+    border-color: #006b1b;
+}
+#reset{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

@@ -31,27 +31,23 @@
         </div>
 
         <div class="main">
-            <div class="minhead flex"><h4>AICTE POINTS</h4></div>
+            <div class="minhead flex"><h4>AICTE POINTS VIEW ACTIVITY - {{ s_n }}</h4></div>
             <table class="tab">
                 <tr>
-                    <th>USN</th>
-                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Activity</th>
                     <th>Points</th>
-                    <th>Modify Activity</th>
+                    <th>Delete Activity</th>
                 </tr>
                 {% for i in b %}
                 <tr>
-                    <td>{{ i.Usn }}</td>
-                    <td>{{ i.Name }}</td>
+                    <td>{{ i.Date }}</td>
+                    <td>{{ i.Activity }}</td>
                     <td>{{ i.Points }}</td>
                     <td>
-                        <button class="btn" style="background-color: #198754;border-color: #198754"
-                        onclick="location.href='/home/Teacher/AICTE/enter/{{ i.Usn }}'" type="button">
-                            Add Activity
-                        </button>
-                        <button class="btn" style="background-color: #0d6efd;border-color: #0d6efd"
-                        onclick="location.href='/home/Teacher/AICTE/view/{{ i.Usn }}'" type="button">
-                            View Activities
+                        <button class="btn" style="background-color: #dc3545;border-color: #dc3545"
+                        onclick="location.href='/home/Teacher/AICTE/view/{{ usn }}/{{i.isd}}'" type="button">
+                            Delete Activity
                         </button>
                     </td>
                 </tr>

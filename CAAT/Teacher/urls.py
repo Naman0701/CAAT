@@ -12,5 +12,11 @@ urlpatterns = [
     path("ATTENDANCE/edit/<sub>/<dept>/<sem>/<sec>",views.e_Attend,name="Attendance_edit"),
     path("ATTENDANCE/del/<sub>/<dept>/<sem>/<sec>/<dat>",views.del_Attend,name="Attendance_del"),
     path("ATTENDANCE/edit/<sub>/<dept>/<sem>/<sec>/<dat>",views.ed_Attend,name="Attendance_edit_a"),
+
     path("AICTE/",views.aicte,name="aicte"),
+    path("AICTE/view/<usn>",views.v_aicte,name="v_aicte"),
+    path("AICTE/view/<usn>/<isd>",views.d_aicte,name="d_aicte"),
+    path("AICTE/enter/<usn>",views.a_aicte,name="a_aicte"),
+    path("AICTE/enter/<usn>/submit",views.a_aicte_done,name="a_aicte_done"),
+
     ]

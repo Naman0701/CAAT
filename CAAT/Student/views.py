@@ -82,7 +82,7 @@ def aicte(req):
     sum=0
     id = req.session['id']
     data = Student.objects.filter(Usn=id)
-    m_name= f'{Mentor.objects.filter(Usn=id).get().Mentor.Fname} {Mentor.objects.filter(Usn=id).get().Mentor.Lname}'
+    m_name= f'{Mentor.objects.filter(Usn=id).get().mentor_d.Fname} {Mentor.objects.filter(Usn=id).get().mentor_d.Lname}'
     allwork=AicteP.objects.filter(Usn=id).order_by('-Date')
     for j in allwork:
         obj=box()

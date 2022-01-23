@@ -193,9 +193,78 @@ def del_Attend(req,sub,dept,sem,sec,dat):
     return redirect('/home/Teacher/ATTENDANCE/')
 
 def aicte(req):
+    class box:
+        Usn:str
+        Name:str
+        Points:int
+    b=[]
     id=req.session['id']
     data = Teacher.objects.filter(Ssn=id)
+    stu=Mentor.objects.filter(mentor_d=id)
+    for i in stu:
+        sum=0
+        obj=box()
+        no = AicteP.objects.filter(Usn=i.Usn)
+        for j in no:
+            sum+=j.Point
+        i.Points=sum
+        i.save()
+        obj.Usn=i.Usn.Usn
+        obj.Name=f'{i.Usn.Fname} {i.Usn.Lname}'
+        obj.Points=i.Points
+        b.append(obj)
     d = {
+        'b':b,
         'name': data.get().Fname + ' ' + data.get().Lname,
     }
     return render(req,'T_aicte.html',d)
+
+def a_aicte(req,usn):
+    id = req.session['id']
+    data = Teacher.objects.filter(Ssn=id)
+    s_name = f'{Student.objects.filter(Usn=usn).get().Fname} {Student.objects.filter(Usn=usn).get().Lname}'
+    d = {
+        's_n': s_name,
+        'usn':usn,
+        'name': data.get().Fname + ' ' + data.get().Lname,
+    }
+    return render(req,'T_a_aicte.html',d)
+
+def a_aicte_done(req,usn):
+    name=req.POST.get('activity')
+    dat=req.POST.get('date')
+    point=req.POST.get('point')
+    stu=Student.objects.get(Usn=usn)
+    aic=AicteP.objects.create(Usn=stu,Date=dat,Activity=name,Point=point)
+    aic.save()
+    return redirect('/home/Teacher/AICTE/')
+
+def v_aicte(req,usn):
+    class box:
+        Date: str
+        Activity: str
+        Points: int
+        isd:int
+    b = []
+    id = req.session['id']
+    data = Teacher.objects.filter(Ssn=id)
+    stu = AicteP.objects.filter(Usn=usn).order_by('Usn')
+    s_name=f'{Student.objects.filter(Usn=usn).get().Fname} {Student.objects.filter(Usn=usn).get().Lname}'
+    for i in stu:
+        obj=box()
+        obj.Date=str(i.Date)
+        obj.Activity=i.Activity
+        obj.Points=i.Point
+        obj.isd=i.id
+        b.append(obj)
+    d={
+        'b':b,
+        'usn':usn,
+        's_n':s_name,
+        'name': data.get().Fname + ' ' + data.get().Lname,
+    }
+    return render(req,'T_v_aicte.html',d)
+def d_aicte(req,usn,isd):
+    AicteP.objects.filter(id=isd).delete()
+    return redirect('/home/Teacher/AICTE/')
+

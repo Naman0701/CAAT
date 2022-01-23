@@ -56,10 +56,10 @@ class Attendance(models.Model):
         return id
 class Mentor(models.Model):
     Usn = models.ForeignKey(Student, on_delete=models.CASCADE)
-    Mentor= models.ForeignKey(Teacher,null=True,on_delete=models.SET_NULL)
+    mentor_d= models.ForeignKey(Teacher,null=True,on_delete=models.SET_NULL)
     Points=models.IntegerField()
     def __str__(self):
-        id=f'{self.Usn}-{self.Mentor}'
+        id=f'{self.Usn}-{self.mentor_d}'
         return id
 class AicteP(models.Model):
     Usn=models.ForeignKey(Student,on_delete=models.CASCADE)
