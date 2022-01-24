@@ -1,3 +1,5 @@
+****THIS IS NOT THE FINAL READ ME. FINAL ONE WILL BE UPLOADED WITHIN 1 WEEK FROM (24-01-2022)****
+
 This is a fully functional College Attendance And AICTE points Trackers aka CAAT.
 Lecturers can use it to add,modify and delete attendance and AICTE points and activities for their classes. 
 
