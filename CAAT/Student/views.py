@@ -34,7 +34,7 @@ def Attend(req):
         except ZeroDivisionError:
             ap=0
         obj.col='#007300'
-        if ap<75:
+        if ap<65:
             obj.col='#d00000'
         obj.tc=tc
         obj.ac=ac

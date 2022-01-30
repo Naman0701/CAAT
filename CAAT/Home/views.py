@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Student,Teacher
 from django.contrib.auth.models import User,auth
+from django.contrib import messages
 
 class box:
     name: str
@@ -28,10 +29,10 @@ def register(req):
                                           is_staff=staff)
             user.save()
         else:
-            print('USER ALREADY REGISTERED')
-    else:
-        print('USER DOES NOT EXIST')
+            messages.success(req, 'User Already Registered')
 
+    else:
+        messages.success(req, 'Invalid USN or SSN')
 
 
 def login(req):
@@ -80,7 +81,6 @@ def home(req):
              }
         return render(req, 'home.html', d)
     else:
-        print('INVALID')
-        redirect('/')
-    return redirect('/')
+        messages.success(req, 'Invalid Credintials')
+        return redirect('/')
 

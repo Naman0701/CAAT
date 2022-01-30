@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/style/S_attend.css' %}">
+
+
+    <title>CAAT</title>
+</head>
+<body>
+    <div class="nav flex">
+        <a>College Attendance And AICTE Points Tracker</a>
+        <a>{{ name }}</a>
+    </div>
+    <!-- Content -->
+    <div id="blur_it" class="content flex" disabled>
+        <div class="side flex">
+            <button class="nav_btn on" type="button">Attendance</button>
+            <button class="nav_btn"  type="button">AICTE</button>
+            <button class="nav_btn"  type="button">Log Out</button>
+
+        </div>
+
+        <div class="main">
+            <div class="minhead flex"><h4>ATTENDANCE {{ s_name }} : {{ dept }}-{{ sem }}{{ sec }} <button class="add_b" onclick="location.href='/home/Teacher/ATTENDANCE/add/{{ s_code }}/{{ dept }}/{{ sem }}/{{ sec }}'" type="button">Add ➕</button></h4></div>
+                <table class="tab">
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Points</th>
+                    <th>Delete Activity</th>
+                </tr>
+                {% for i in b %}
+                <tr>
+                    <td>{{ i.Date }}</td>
+                    <td>{{ i.Activity }}</td>
+                    <td>{{ i.Points }}</td>
+                    <td>
+                        <button class="btn" style="background-color: #dc3545;border-color: #dc3545">
+                            Delete Activity
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            </table>
+        </div>
+
+
+    </div>
+
+    <div class="warn">
+        <div class="minhead flex"><h2><img src="/static/img/warn.png" style="height: 25px"> !!!! WARNING !!!! <img src="/static/img/warn.png" style="height: 25px"></h2></div>
+        <h3> Are you sure you want to delete the acivity {{ a_name }}?</h3>
+        <div class="button_div flex">
+        <button id="no" class="btn"style="background-color: #198754 ;border-color: #198754; margin-right: 7px"
+        onclick="location.href='/home/Teacher/AICTE/view/{{ usn }}'">
+        NO</button>
+        <button id="yes" class="btn"style="background-color: #dc3545 ;border-color: #dc3545; margin-right: 7px"
+        onclick="location.href='/home/Teacher/AICTE/del/{{ usn }}/{{ isd }}'" type="button">
+        YES</button>
+</div>
+    </div>
+<script>
+    var p2=localStorage.getItem("id");
+</script>
+</body>
+
+</html>

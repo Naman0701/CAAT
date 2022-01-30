@@ -141,3 +141,20 @@ input:checked + .slider:before {
   -ms-transform: translateX(14px);
   transform: translateX(14px);
 }
+#mess{
+    justify-content: space-between;
+    position: absolute;
+    border-radius: 13px;
+    border: 2px solid #efd300;
+    background-color: rgba(21, 82, 86, 0.84);
+    margin: 15px;
+    padding: 7px;
+    top: 25%;
+    left: 40%;
+    color: white;
+}
+#mess button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}

@@ -14,6 +14,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div id="outline" class="flex">
         <div class="main_box flex">
+            {% if messages %}
+            <div class="flex" id="mess">
+            {% for message in messages %}
+                <img src="/static/img/warn.png" style="height: 20px; margin-right: 5px">
+                <strong>{{ message }}</strong>
+                <button id="x" onclick="hide_it()">X</button>
+            {% endfor %}
+            </div>
+            {% endif %}
+
         <div class="box flex">
             <form name="log_in" id="log_in" class="items" action="/home/" method="post"> {% csrf_token %}
             <input type="text" placeholder="USN OR SSN" class="user" name="id" required>
@@ -56,6 +66,13 @@
         </div>
 
 <script>
+
+       function hide_it()
+    {
+        var div=document.getElementById('mess');
+        div.style.display='none';
+    }
+
     var p1=document.getElementById('pwd1'),
         p2=document.getElementById('pwd2');
 
@@ -66,6 +83,7 @@
     $('.reg_box').animate({height: "toggle", opacity: "toggle"}, "slow");
     document.getElementById('log_in').reset();
     document.getElementById('register').reset();
+    hide_it();
   }
  );
 

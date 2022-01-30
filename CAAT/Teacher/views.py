@@ -1,6 +1,6 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect
 from Home.models import Student,Teacher,Subject,Attendance,Mentor,AicteP,Teaches
-from django.contrib.auth.models import User,auth
+from django.contrib import messages
 from datetime import date
 
 def Attend(req):
@@ -24,11 +24,13 @@ def Attend(req):
             obj.sem=i.Sem
             obj.sec=i.Sec
             b.append(obj)
-        d = {
-            'b':b,
-            'name': data.get().Fname + ' ' + data.get().Lname,
+    d = {
+        'b':b,
+        'name': data.get().Fname + ' ' + data.get().Lname,
         }
-        return render(req,'T_attend.html',d)
+
+
+    return render(req,'T_attend.html',d)
 def en_Attend(req,sub,dept,sem,sec):
     class box:
         Usn:str
@@ -53,11 +55,63 @@ def en_Attend(req,sub,dept,sem,sec):
         'sem': sem,
         'sec': sec
     }
-    dates=Attendance.objects.filter(Sub_code=sub).filter(Date=date.today())
+    dates=Attendance.objects.filter(Sub_code=sub,Date=date.today(),Usn__Dept=dept,Usn__Sem=sem,Usn__Section=sec)
     if dates.exists():
+        messages.success(req, "Attendance Already Entered For Today")
+
         return redirect('/home/Teacher/ATTENDANCE/')
 
     return render(req,'T_edit.html',d)
+
+def add_attend(req,sub,dept,sem,sec):
+    class box:
+        usn: str
+        name: str
+
+    b = []
+    id = req.session['id']
+    data = Teacher.objects.filter(Ssn=id)
+    s_name = Subject.objects.filter(Sub_code=sub).get().Sub_name
+    Stu = Student.objects.filter(Dept=dept).filter(Sem=sem).filter(Section=sec).order_by('Usn')
+    for i in Stu:
+        obj = box()
+        obj.usn = i.Usn
+        obj.name = f'{i.Fname} {i.Lname}'
+        b.append(obj)
+
+    d={
+        'b':b,
+        'name': data.get().Fname + ' ' + data.get().Lname,
+        'sub': sub,
+        's_name': s_name,
+        'dept': dept,
+        'sem': sem,
+        'sec': sec
+
+    }
+    return render(req,'T_add.html',d)
+
+def add_sub_attend(req,sub,dept,sem,sec):
+    din = req.POST.get('date')
+    Stu = Student.objects.filter(Dept=dept).filter(Sem=sem).filter(Section=sec).order_by('Usn')
+    Subj = Subject.objects.get(Sub_code=sub)
+    if  not Attendance.objects.filter(Date=din,Sub_code=sub,Usn__Dept=dept,Usn__Sem=sem,Usn__Section=sec).exists():
+
+        for i in Stu:
+            mark=req.POST.get(i.Usn,'off')
+            val=True
+            if mark=='off':
+                val=False
+            attend=Attendance.objects.create(Usn=i,Sub_code=Subj,Date=din,Mark=val)
+            attend.save()
+
+        messages.success(req,"Attendance Added Successfully")
+        return redirect('/home/Teacher/ATTENDANCE/')
+    else:
+        messages.success(req,"Attendance Already Exists")
+        return redirect('/home/Teacher/ATTENDANCE/')
+
+
 
 def done_Attend(req,sub,dept,sem,sec):
     Stu = Student.objects.filter(Dept=dept).filter(Sem=sem).filter(Section=sec).order_by('Usn')
@@ -70,6 +124,7 @@ def done_Attend(req,sub,dept,sem,sec):
             val=False
         attend=Attendance.objects.create(Usn=i,Sub_code=Subj,Date=dat,Mark=val)
         attend.save()
+    messages.success(req,"Attendance Added Successfully")
 
     return redirect('/home/Teacher/ATTENDANCE/')
 
@@ -100,7 +155,7 @@ def v_Attend(req,sub,dept,sem,sec):
         except ZeroDivisionError:
             ap = 0
         obj.col = '#007300'
-        if ap < 75:
+        if ap < 65:
             obj.col = '#d00000'
         obj.Usn=i.Usn
         obj.Name=f'{i.Fname} {i.Lname}'
@@ -124,7 +179,7 @@ def e_Attend(req,sub,dept,sem,sec):
     pair = []
     id = req.session['id']
     teach = Teacher.objects.filter(Ssn=id)
-    dates=Attendance.objects.filter(Sub_code=sub).order_by('-Date')
+    dates=Attendance.objects.filter(Sub_code=sub,Usn__Dept=dept,Usn__Sem=sem,Usn__Section=sec).order_by('-Date')
     for i in dates:
         dinak=str(i.Date)
         p1=f'{dinak}-{i.Usn}'
@@ -189,7 +244,34 @@ def up_attend(req,sub,dept,sem,sec,dat):
 
     return redirect('/home/Teacher/ATTENDANCE/')
 def del_Attend(req,sub,dept,sem,sec,dat):
-    Attendance.objects.filter(Sub_code=sub,Date=dat).delete()
+    din = []
+    pair = []
+    id = req.session['id']
+    teach = Teacher.objects.filter(Ssn=id)
+    dates = Attendance.objects.filter(Sub_code=sub, Usn__Dept=dept, Usn__Sem=sem, Usn__Section=sec).order_by('-Date')
+    for i in dates:
+        dinak = str(i.Date)
+        p1 = f'{dinak}-{i.Usn}'
+        if (p1 in pair) or (dinak not in din):
+            din.append(dinak)
+            pair.append(p1)
+        else:
+            pass
+    d = {
+        'b': din,
+        'name': teach.get().Fname + ' ' + teach.get().Lname,
+        's_name': Subject.objects.filter(Sub_code=sub).get().Sub_name,
+        's_code': sub,
+        'dept': dept,
+        'sem': sem,
+        'sec': sec,
+        'dat':dat
+    }
+
+    return render(req,'T_conf_del.html',d)
+def cdel_Attend(req,sub,dept,sem,sec,dat):
+    Attendance.objects.filter(Sub_code=sub,Date=dat,Usn__Dept=dept,Usn__Sem=sem,Usn__Section=sec).delete()
+    messages.success(req,"Attendance Deleted Successfully")
     return redirect('/home/Teacher/ATTENDANCE/')
 
 def aicte(req):
@@ -237,6 +319,7 @@ def a_aicte_done(req,usn):
     stu=Student.objects.get(Usn=usn)
     aic=AicteP.objects.create(Usn=stu,Date=dat,Activity=name,Point=point)
     aic.save()
+    messages.success(req,'Activity Added Successfully')
     return redirect('/home/Teacher/AICTE/')
 
 def v_aicte(req,usn):
@@ -265,6 +348,35 @@ def v_aicte(req,usn):
     }
     return render(req,'T_v_aicte.html',d)
 def d_aicte(req,usn,isd):
+
+    class box:
+        Date: str
+        Activity: str
+        Points: int
+        isd:int
+    b = []
+    id = req.session['id']
+    data = Teacher.objects.filter(Ssn=id)
+    stu = AicteP.objects.filter(Usn=usn).order_by('Usn')
+    s_name=f'{Student.objects.filter(Usn=usn).get().Fname} {Student.objects.filter(Usn=usn).get().Lname}'
+    for i in stu:
+        obj=box()
+        obj.Date=str(i.Date)
+        obj.Activity=i.Activity
+        obj.Points=i.Point
+        obj.isd=i.id
+        b.append(obj)
+    d={
+        'b':b,
+        'usn':usn,
+        'isd':isd,
+        'a_name':AicteP.objects.get(id=isd).Activity,
+        's_n':s_name,
+        'name': data.get().Fname + ' ' + data.get().Lname,
+    }
+    return render(req,'T_del_aicte.html',d)
+def cd_aicte(req,usn,isd):
     AicteP.objects.filter(id=isd).delete()
+    messages.success(req,'Activity Deleted Successfully')
     return redirect('/home/Teacher/AICTE/')
 

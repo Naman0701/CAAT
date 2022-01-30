@@ -15,7 +15,12 @@
 <body>
 <script>
     var p2=localStorage.getItem("id");
-    console.log(p2);
+        function hide_it()
+    {
+        var div=document.getElementById('mess');
+        div.style.display='none';
+    }
+
 </script>
     <div class="nav flex">
         <a>College Attendance And AICTE Points Tracker</a>
@@ -32,6 +37,18 @@
 
         <div class="main">
             <div class="minhead flex"><h4>AICTE POINTS</h4></div>
+
+            {% if messages %}
+            <div class="flex" id="mess">
+            {% for message in messages %}
+                <strong>{{ message }}</strong>
+                <button id="x" onclick="hide_it()">X</button>
+            {% endfor %}
+            </div>
+            {% endif %}
+
+
+
             <table class="tab">
                 <tr>
                     <th>USN</th>

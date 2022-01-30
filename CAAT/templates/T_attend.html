@@ -15,12 +15,18 @@
 <body>
 <script>
     var p2=localStorage.getItem("id");
-    console.log({{ already }});
+    function hide_it()
+    {
+        var div=document.getElementById('mess');
+        div.style.display='none';
+    }
+
 </script>
     <div class="nav flex">
         <a>College Attendance And AICTE Points Tracker</a>
         <a>{{ name }}</a>
     </div>
+
     <!-- Content -->
     <div class="content flex">
         <div class="side flex">
@@ -32,6 +38,14 @@
 
         <div class="main">
             <div class="minhead flex"><h4>ATTENDANCE</h4></div>
+            {% if messages %}
+            <div class="flex" id="mess">
+            {% for message in messages %}
+                <strong>{{ message }}</strong>
+                <button id="x" onclick="hide_it()">X</button>
+        {% endfor %}
+            </div>
+            {% endif %}
             <table class="tab">
                 <tr>
                     <th>Course ID</th>
@@ -47,7 +61,7 @@
                     <td>
                         <button class="btn" style="background-color: #198754;border-color: #198754"
                         onclick="location.href='/home/Teacher/ATTENDANCE/enter/{{ i.s_code }}/{{ i.dept }}/{{ i.sem }}/{{ i.sec }}'" type="button">
-                            Enter Attendance
+                            Today's Attendance
                         </button>
                         <button class="btn" style="background-color: #0d6efd;border-color: #0d6efd"
                         onclick="location.href='/home/Teacher/ATTENDANCE/view/{{ i.s_code }}/{{ i.dept }}/{{ i.sem }}/{{ i.sec }}'" type="button">

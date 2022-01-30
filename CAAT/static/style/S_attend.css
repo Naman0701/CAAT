@@ -174,3 +174,57 @@ input:checked + .slider:before {
     display: inline-block;
     color: #007300;
 }
+#date{
+    font-weight: 800;
+    color: black;
+    background-color: inherit;
+    border: none
+}
+#date:hover{
+    border: none;
+}
+.add_b{
+    background-color: #a8ffc3;
+    border-color: #009b08;
+    border-radius: 29px;
+    position: absolute;
+    right: 75px;
+}
+#mess{
+    justify-content: space-between;
+    background-color: #bfd9fe ;
+    margin: 15px;
+    padding: 15px;
+}
+#mess button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.warn{
+    padding: 5px;
+    position: absolute;
+    width: 45%;
+    /*height: 50%;*/
+    background-color: #1e2426;
+    left: 33%;
+    top: 33%;
+}
+.warn h3{
+    color: white;
+    padding: 10px;
+}
+.warn .minhead{
+    margin-top: 0px;
+}
+.button_div{
+    justify-content: flex-end;
+    padding: 7px;
+}
+#blur_it{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+#blur_it button{
+    pointer-events: none;
+}
