@@ -79,6 +79,7 @@ def aicte(req):
     class box:
         name:str
         point:int
+        date:str
     sum=0
     id = req.session['id']
     data = Student.objects.filter(Usn=id)
@@ -88,6 +89,7 @@ def aicte(req):
         obj=box()
         obj.name=j.Activity
         obj.point=j.Point
+        obj.date=str(j.Date)
         sum+=j.Point
         b.append(obj)
     Ment=Mentor.objects.get(Usn=id)

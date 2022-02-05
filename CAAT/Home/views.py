@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Student,Teacher
+from django.views.decorators.cache import cache_control
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 
@@ -48,6 +49,7 @@ def login(req):
 
 def home(req):
     id = req.POST.get('id')
+    print(id)
     req.session['id']=id
     pwd = req.POST.get('pwd')
     user=auth.authenticate(username=id, password=pwd)
@@ -84,3 +86,7 @@ def home(req):
         messages.success(req, 'Invalid Credintials')
         return redirect('/')
 
+@cache_control(no_cache=True, must_revalidate=True)
+def logout(req):
+    req.session.flush()
+    return redirect('/')

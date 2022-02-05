@@ -207,7 +207,7 @@ def ed_Attend(req,sub,dept,sem,sec,dat):
     b = []
     id = req.session['id']
     teach = Teacher.objects.filter(Ssn=id)
-    dates = Attendance.objects.filter(Date=dat)
+    dates = Attendance.objects.filter(Date=dat,Usn__Dept=dept, Usn__Sem=sem, Usn__Section=sec,Sub_code=sub)
     for i in dates:
         obj=box()
         obj.usn=i.Usn.Usn
