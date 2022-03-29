@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime,date
 # Create your models here.
 class Student(models.Model):
     Usn=models.CharField(max_length=10,primary_key=True)
@@ -63,7 +62,7 @@ class Mentor(models.Model):
         return id
 class AicteP(models.Model):
     Usn=models.ForeignKey(Student,on_delete=models.CASCADE)
-    Date=models.DateField(default=date.today())
+    Date=models.DateField()
     Activity=models.CharField(max_length=50)
     Point=models.IntegerField(default=0)
 
