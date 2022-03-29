@@ -58,6 +58,8 @@ def home(req):
           'View your AICTE points based on the activites attended.')
     if user is not None:
         data=User.objects.filter(username=id)
+        if data.get().is_superuser:
+            return redirect('/admin')
         role=data.get().is_staff
         i = 1
         staff='Student'

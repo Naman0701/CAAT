@@ -15,6 +15,8 @@ def Attend(req):
     data=Student.objects.filter(Usn=id)
     Sem=data.get().Sem
     Dept=data.get().Dept
+    if Dept=='ISE':
+        Dept='CSE'
     Sub=Subject.objects.filter(Sem=Sem).filter(Dept=Dept)
     Atd=Attendance.objects.filter(Usn=id)
     tc=0
@@ -32,7 +34,7 @@ def Attend(req):
         try:
             ap=round(ac/tc*100,2)
         except ZeroDivisionError:
-            ap=0
+            ap=100
         obj.col='#007300'
         if ap<65:
             obj.col='#d00000'
