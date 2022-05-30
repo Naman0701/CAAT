@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c305d462-0733-4f47-90da-2b412d7a184b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CAAT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAAT/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0002_subject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0003_teaches.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0004_delete_teaches.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0005_teaches.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0006_attendance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0007_attendance_mark.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0008_aicte.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0009_auto_20220121_1953.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0010_auto_20220121_2042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0011_alter_aictep_point.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0012_aictep_activity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0013_alter_aictep_activity.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0014_auto_20220122_1516.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0015_auto_20220123_1521.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0016_alter_attendance_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0017_rename_mentor_mentor_mentor_d.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/0018_alter_aictep_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teacher/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/changelists.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/nav_sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/responsive_rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/fonts/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/calendar-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-unknown-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-unknown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/icon-yes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/inline-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/selector-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/sorting-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/tooltag-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/img/tooltag-arrowright.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/SelectBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/SelectFilter2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/autocomplete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/inlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/nav_sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/popup_response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/AICTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/attend.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/warn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/style/S_attend.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/style/T_aicte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/style/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/style/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/changelists.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/nav_sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/responsive_rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/fonts/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/calendar-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-unknown-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-unknown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/icon-yes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/inline-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/selector-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/sorting-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/tooltag-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/img/tooltag-arrowright.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/SelectBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/SelectFilter2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/autocomplete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/inlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/nav_sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/popup_response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/AICTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/attend.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/warn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/S_attend.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/T_aicte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/AICTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/attend.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/warn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/S_attend.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/T_aicte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Aicte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/S_attendance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_a_aicte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_aicte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_attend.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_class_attend.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_conf_del.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_del_aicte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_edit_A.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_editatt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/T_v_aicte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attend_subject.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22dgP4S5G7WNmjvOwR8onTYP1WN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "N:/nnama/Work/DBMS",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="N:\nnama\Work\DBMS\CAAT\templates" />
+      <recent name="N:\nnama\Work\DBMS\CAAT\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\nnama\Work\DBMS\CAAT" />
+      <recent name="N:\nnama\Work\DBMS\CAAT\static\img" />
+      <recent name="N:\nnama\Work\DBMS\CAAT\static\style" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CAAT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CAAT" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CAAT/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CAAT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Home" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Home/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CAAT" type="Python.DjangoServer" factoryName="Django server">
+      <module name="CAAT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.settings" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c305d462-0733-4f47-90da-2b412d7a184b" name="Changes" comment="" />
+      <created>1640172850785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640172850785</updated>
+      <workItem from="1640172853255" duration="7334000" />
+      <workItem from="1640183505922" duration="995000" />
+      <workItem from="1640184911171" duration="453000" />
+      <workItem from="1640186368123" duration="1984000" />
+      <workItem from="1641622953987" duration="664000" />
+      <workItem from="1641812835782" duration="1891000" />
+      <workItem from="1641892853504" duration="6345000" />
+      <workItem from="1641915082831" duration="558000" />
+      <workItem from="1642271502104" duration="560000" />
+      <workItem from="1642312758381" duration="736000" />
+      <workItem from="1642390043323" duration="10103000" />
+      <workItem from="1642419963648" duration="8295000" />
+      <workItem from="1642477651756" duration="2332000" />
+      <workItem from="1642512892237" duration="7049000" />
+      <workItem from="1642563875059" duration="1137000" />
+      <workItem from="1642603685063" duration="1570000" />
+      <workItem from="1642680838003" duration="5866000" />
+      <workItem from="1642687330348" duration="9806000" />
+      <workItem from="1642740048684" duration="1054000" />
+      <workItem from="1642767062785" duration="9181000" />
+      <workItem from="1642826357154" duration="23411000" />
+      <workItem from="1642916463111" duration="12883000" />
+      <workItem from="1642943621273" duration="7900000" />
+      <workItem from="1643108130131" duration="981000" />
+      <workItem from="1643396697842" duration="1556000" />
+      <workItem from="1643436518343" duration="24111000" />
+      <workItem from="1643531209802" duration="1753000" />
+      <workItem from="1643548576331" duration="1509000" />
+      <workItem from="1643907475098" duration="615000" />
+      <workItem from="1643910938642" duration="3006000" />
+      <workItem from="1644302672466" duration="1325000" />
+      <workItem from="1644304108623" duration="4036000" />
+      <workItem from="1648559331267" duration="3134000" />
+      <workItem from="1648627132834" duration="413000" />
+      <workItem from="1649849009611" duration="56000" />
+      <workItem from="1653406190512" duration="410000" />
+      <workItem from="1653409858553" duration="869000" />
+      <workItem from="1653468455722" duration="684000" />
+      <workItem from="1653550969213" duration="1029000" />
+      <workItem from="1653934916805" duration="5559000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CAAT$views.coverage" NAME="views Coverage Results" MODIFIED="1640178949973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Home" />
+    <SUITE FILE_PATH="coverage/CAAT$settings.coverage" NAME="settings Coverage Results" MODIFIED="1640178709904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CAAT" />
+  </component>
+</project>
