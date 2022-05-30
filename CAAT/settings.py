@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET']
 
 
-ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','college-erp-0701.herokuapp.com']
 
 DEBUG=False
 
