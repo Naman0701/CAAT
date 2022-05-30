@@ -7,9 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i=j9we7c8xx6w8uv$&3@n3pc#-0ko9xt@ah3bovn6(m6eq$l=i'
 
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
-DEBUG=True
+DEBUG=False
 
 # Application definition
 
@@ -30,6 +30,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -66,8 +67,8 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-db=dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db)
+# db=dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db)
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -99,6 +100,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS=[
     BASE_DIR /'static',
 ]
