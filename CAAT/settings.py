@@ -67,8 +67,8 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-# db=dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db)
+db=dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db)
 
 
 AUTH_PASSWORD_VALIDATORS = [
