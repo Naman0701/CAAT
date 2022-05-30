@@ -58,15 +58,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'CAAT.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'caat',
-        'USER': 'postgres',
-        'PASSWORD': 'Iloveu3000',
-        'HOST': 'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'caat',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Iloveu3000',
+#         'HOST': 'localhost'
+#     }
+# }
 # db=dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db)
 
