@@ -4,7 +4,7 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ['SECRET']
+SECRET_KEY = 'django-insecure-i=j9we7c8xx6w8uv$&3@n3pc#-0ko9xt@ah3bovn6(m6eq$l=i'
 
 
 ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','college-erp-0701.herokuapp.com']
