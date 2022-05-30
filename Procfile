@@ -1,3 +1,1 @@
-python manage.py collectstatic --noinput
-
-python manage.py runserver 0.0.0.0:$PORT
+web: waitress-serve --port=$PORT CAAT.wsgi:application

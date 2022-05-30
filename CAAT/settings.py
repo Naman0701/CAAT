@@ -4,10 +4,10 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-i=j9we7c8xx6w8uv$&3@n3pc#-0ko9xt@ah3bovn6(m6eq$l=i'
+SECRET_KEY = os.environ['SECRET']
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost']
 
 DEBUG=False
 
@@ -100,7 +100,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
+# STATIC_ROOT0=os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS=[
     BASE_DIR /'static',
 ]
