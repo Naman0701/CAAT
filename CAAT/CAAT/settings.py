@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,7 +66,8 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-
+db=dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db)
 
 
 AUTH_PASSWORD_VALIDATORS = [
