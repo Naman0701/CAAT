@@ -61,14 +61,14 @@ WSGI_APPLICATION = 'CAAT.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'caat',
-        'USER': 'postgres',
-        'PASSWORD': 'Iloveu3000',
-        'HOST': 'localhost'
+        'NAME': os.environ['dbname'],
+        'USER': os.environ['dbuname'],
+        'PASSWORD': os.environ['dbpwd'],
+        'HOST': os.environ['host']
     }
 }
-db=dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db)
+# db=dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db)
 
 
 AUTH_PASSWORD_VALIDATORS = [
