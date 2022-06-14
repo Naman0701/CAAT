@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-i=j9we7c8xx6w8uv$&3@n3pc#-0ko9xt@ah3bovn6(m6eq$l=i
 
 ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','127.0.0.1','college-erp-0701.herokuapp.com']
 
-DEBUG=False
+DEBUG=True
 
 # Application definition
 
