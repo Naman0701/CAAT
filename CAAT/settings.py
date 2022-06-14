@@ -11,6 +11,8 @@ ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','127.0.0.1','college-erp-0
 
 DEBUG=True
 
+CSRF_TRUSTED_ORIGINS = ['https://*.caat0701.herokuapp.com','https://*.127.0.0.1']
+
 # Application definition
 
 INSTALLED_APPS = [
