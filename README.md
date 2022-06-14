@@ -10,7 +10,7 @@ Also the students can check their respective information anytime.
 To show the application in use follow the link: https://caat0701.herokuapp.com/
 
 Teacher Login:
-Username: 18CS003
+Username: 18003
 Password: Rohit00*
 
 Student Login:
