@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i=j9we7c8xx6w8uv$&3@n3pc#-0ko9xt@ah3bovn6(m6eq$l=i'
 
 
-ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','college-erp-0701.herokuapp.com']
+ALLOWED_HOSTS = ['caat0701.herokuapp.com','localhost','127.0.0.1','college-erp-0701.herokuapp.com']
 
 DEBUG=False
 
@@ -61,14 +61,14 @@ WSGI_APPLICATION = 'CAAT.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['dbname'],
-        'USER': os.environ['dbuname'],
-        'PASSWORD': os.environ['dbpwd'],
-        'HOST': os.environ['host']
+        'NAME': 'caat',
+        'USER': 'postgres',
+        'PASSWORD': 'Iloveu3000',
+        'HOST': 'localhost'
     }
 }
-# db=dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db)
+db_from_env=dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 AUTH_PASSWORD_VALIDATORS = [
