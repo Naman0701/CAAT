@@ -33,7 +33,7 @@
 
         <div class="main">
             <div class="minhead flex"><h4>AICTE POINTS ADD NEW ACTIVITY - {{ s_n }}</h4></div>
-            <form name="a_act"  class="a_act flex" action="http://127.0.0.1:8000/home/Teacher/AICTE/enter/{{ usn }}/submit" method="post"> {% csrf_token %}
+            <form name="a_act"  class="a_act flex" action="/home/Teacher/AICTE/enter/{{ usn }}/submit" method="post"> {% csrf_token %}
 
                 <div class="t_item">
                 <label for="activity">Enter The Activity Name : </label>
